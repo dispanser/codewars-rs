@@ -21,6 +21,7 @@ pub fn wave_ascii(s: &str) -> Vec<String> {
     result
 }
 
+/// utf-8 compliant.
 pub fn wave(s: &str) -> Vec<String> {
     s.char_indices()
         .filter(|(_, c)| !c.is_whitespace())
