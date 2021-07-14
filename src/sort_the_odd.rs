@@ -10,15 +10,14 @@ pub fn sort_array(arr: &[i32]) -> Vec<i32> {
     println!("{:?}", odds);
     let mut solution: Vec<i32> = vec![];
 
-    let mut odd_index = 0;
-    for &v in arr {
+    let mut odd_iter = odds.iter();
+    arr.iter().for_each(|v| {
         if v % 2 == 0 {
-            solution.push(v);
+            solution.push(*v);
         } else {
-            solution.push(odds[odd_index]);
-            odd_index += 1;
+            solution.push(*odd_iter.next().unwrap());
         }
-    }
+    });
     solution
 }
 
