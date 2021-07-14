@@ -49,7 +49,7 @@ pub fn longest_windowing_lengths(strarr: Vec<&str>, k: usize) -> String {
         let lengths: Vec<usize> = strarr.iter().map(|s| s.len()).collect();
         // problem: windows seems to only give us the slice, but not its
         // position
-        let (index, length): (usize, usize) = lengths
+        let (index, _length): (usize, usize) = lengths
             .windows(k)
             .map(|ls| ls.into_iter().sum())
             .enumerate()
