@@ -1,5 +1,6 @@
 pub mod consecutive_strings;
 pub mod highest_scoring_word;
+pub mod josephus_survivor;
 pub mod mexican_wave;
 pub mod rgb_to_hex;
 pub mod secret_string;
